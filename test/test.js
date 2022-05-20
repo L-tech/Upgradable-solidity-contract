@@ -63,7 +63,7 @@ describe("Proxy", async () => {
 
     const proxied = new ethers.Contract(proxy.address, abi, owner);
 
-    await proxied.setRewardsPoints(0x12C);
-    expect(await proxied.getRewardsPoints()).to.eq("0x1C2");
+    await proxied.setRewardsPoints(0x12C);//150
+    expect(await proxied.getRewardsPoints()).to.eq("0x1C2");//300
   });
 });
